@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>朱梓健 — 把想法变成能跑的东西</title>
+<meta name="description" content="朱梓健的个人站。21 岁，软件技术专业，大连。用 AI 独立交付四个完整项目——从 80 万字小说的智能分析系统，到 148 个测试用例兜底的终端应用。求职方向：实施工程师 / 技术支持 / 技术文档。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index">首页</a></li>
+      <li><a href="projects.html" data-page="projects">项目</a></li>
+      <li><a href="blog.html" data-page="blog">博客</a></li>
+      <li><a href="resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">Dalian · Software Technology · Class of 2026</p>
+        <h1>把想法<span class="accent-dot">，</span><br>变成能跑的东西<span class="accent-dot">.</span></h1>
+        <p class="hero-role">
+          <span class="brand">@zzj<span class="at">:~$</span></span>
+          <span class="sep"></span>
+          朱梓健 · 21 岁
+          <span class="sep"></span>
+          AI 应用实施 / 技术支持
+        </p>
+        <p class="hero-bio">
+          软件技术专业应届。过去一年，我用 AI 独立交付了四个完整项目——
+          从 <strong>80 万字小说的智能分析系统</strong>，到
+          <strong>148 个测试用例覆盖的终端塔罗应用</strong>。
+          我相信 AI 是杠杆，但<strong>撬动杠杆的那个人，得先想清楚要撬什么</strong>。
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="projects.html">看看我做的东西 →</a>
+          <a class="btn btn-ghost" href="resume.html">简历</a>
+        </div>
+      </div>
+      <div class="term reveal">
+        <div class="term-bar">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">zzj@home — zsh</span>
+        </div>
+        <div class="term-body" id="term-body"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">此刻正在做</h2>
+    </div>
+    <div class="now-strip">
+      <div class="now-item reveal" style="--d:.05s">
+        <span class="now-tag" style="color:var(--gold)">招聘中</span>
+        <h3>大连 · 实施 / 技术支持 / 技术文档</h3>
+        <p>人在大连，想从基层做起，慢慢长。5-7K，随时可到岗。简历和联系方式<a class="inline-link" href="resume.html">看这里 →</a></p>
+      </div>
+      <div class="now-item reveal" style="--d:.15s">
+        <span class="now-tag">进行中</span>
+        <h3>把作品摆上台面</h3>
+        <p>给做过的项目写案例，把简历上的每一句话都变成"可以展开讲、讲完对方会点头"的东西。你现在看的这个站，就是第一步。</p>
+      </div>
+      <div class="now-item reveal" style="--d:.25s">
+        <span class="now-tag">长期</span>
+        <h3>北极星计划</h3>
+        <p>十年人生规划系统：六个齿轮、季度体检、年度胜率。大方向不轻易变，细节随世界变。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tinted">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">做过的东西</h2>
+      <a class="sec-link" href="projects.html">全部项目 <span class="arr">→</span></a>
+    </div>
+    <div class="proj-grid">
+      <div class="proj reveal" style="--d:.05s">
+        <div class="proj-top"><h3><a href="projects.html#story-wiki">AI 故事知识库</a></h3><span class="proj-num">2026.06</span></div>
+        <p class="proj-desc">把 80 万字的《红楼梦》喂给 AI，自动拆出人物关系、设定标签，生成 Obsidian 知识库，还能画角色成长曲线。</p>
+        <div class="proj-foot">
+          <span class="tag">Python</span><span class="tag">DeepSeek API</span><span class="tag">长文本处理</span>
+          <a class="proj-link" href="projects.html#story-wiki">详情 <span class="arr">↗</span></a>
+        </div>
+      </div>
+      <div class="proj reveal" style="--d:.12s">
+        <div class="proj-top"><h3><a href="projects.html#tarot">Terminal Tarot</a></h3><span class="proj-num">2026.06</span></div>
+        <p class="proj-desc">终端里的塔罗牌占卜。78 张牌、真彩色像素渲染、AI 解读 + 离线降级，148 个 pytest 用例兜底。</p>
+        <div class="proj-foot">
+          <span class="tag">Rich TUI</span><span class="tag">API 集成</span><span class="tag">pytest</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/terminal-tarot" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+      <div class="proj reveal" style="--d:.19s">
+        <div class="proj-top"><h3><a href="projects.html#daily">AI 每日简报</a></h3><span class="proj-num">2026.05</span></div>
+        <p class="proj-desc">从 AI HOT、量子位、36氪 自动抓资讯，AI 筛选合成，30 条压成 5 条，一条消息读完今天。</p>
+        <div class="proj-foot">
+          <span class="tag">RSS 聚合</span><span class="tag">Prompt 工程</span><span class="tag">Crontab</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+      <div class="proj reveal" style="--d:.26s">
+        <div class="proj-top"><h3><a href="projects.html#five">五问法</a></h3><span class="proj-num">方法论</span></div>
+        <p class="proj-desc">六个固定问题，把任何模糊想法变成 AI 能直接执行的清晰指令。先想清楚，再动手。</p>
+        <div class="proj-foot">
+          <span class="tag">提示词工程</span><span class="tag">需求管理</span>
+          <a class="proj-link" href="projects.html#five">详情 <span class="arr">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">写过的东西</h2>
+      <a class="sec-link" href="blog.html">全部文章 <span class="arr">→</span></a>
+    </div>
+    <ul class="post-list">
+      <li class="reveal">
+        <a href="blog/last-mile.html">
+          <div class="post-row">
+            <span class="post-date">2026.07.21</span>
+            <div>
+              <h3>AI 的最后一公里，是人的事</h3>
+              <p class="post-excerpt">会用工具不等于拥有能力。模型到用户之间那段路，不需要算法，需要对场景的理解——恰好是没什么光环的人能走的路。</p>
+            </div>
+            <span class="post-arrow">→</span>
+          </div>
+        </a>
+      </li>
+      <li class="reveal" style="--d:.08s">
+        <a href="blog/fudu.html">
+          <div class="post-row">
+            <span class="post-date">2026.06.29</span>
+            <div>
+              <h3>复读与不复读</h3>
+              <p class="post-excerpt">人类的本质是复读机，AI 也是。区别在于：人类知道"我在复读什么"，AI 不知道。最高级的不复读，是有意识地复读。</p>
+            </div>
+            <span class="post-arrow">→</span>
+          </div>
+        </a>
+      </li>
+      <li class="reveal" style="--d:.16s">
+        <a href="blog/map.html">
+          <div class="post-row">
+            <span class="post-date">2026.06.10</span>
+            <div>
+              <h3>认知是一张漆黑的地图</h3>
+              <p class="post-excerpt">学过的每个知识、每次思考，都是在点亮地图。没被点亮的地方，就是认知的边界。问题是：你不知道哪里是黑的。</p>
+            </div>
+            <span class="post-arrow">→</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"不求大富大贵，只求平凡即喜乐。"<br>能力覆盖欲望，稳步向前。</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="13309804550" title="点击复制电话">13309804550</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI 协作完成</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="assets/main.js"></script>
+</body>
+</html>

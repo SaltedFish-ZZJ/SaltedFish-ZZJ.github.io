@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>认知是一张漆黑的地图 — 朱梓健</title>
+<meta name="description" content="提问质量与 AI 回答质量的相关性是 0.92。认知边界能不能被探索？鱼在出水之前无法感知水。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="blog">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-page="index">首页</a></li>
+      <li><a href="../projects.html" data-page="projects">项目</a></li>
+      <li><a href="../blog.html" data-page="blog">博客</a></li>
+      <li><a href="../resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<article class="post-page">
+  <div class="container">
+    <div class="post-wrap">
+      <div class="post-meta reveal">
+        <span>2026.06.10</span>
+        <span>·</span>
+        <span>思考碎片 № 02</span>
+        <span class="tag">元认知</span>
+        <span class="tag">提问</span>
+      </div>
+      <h1 class="reveal" style="--d:.08s">认知是一张漆黑的地图</h1>
+      <p class="post-lede reveal" style="--d:.16s">
+        从一个寓言 Prompt 开始，绕到提问能力评估，最后停在一个比喻上——
+        它不精确，但足够好用。
+      </p>
+
+      <div class="post-body">
+        <h2 class="reveal">一、0.92 系数</h2>
+        <p class="reveal">Anthropic 分析过 100 万条真实对话，得出一个数字：<strong>人类提问质量与 AI 回答质量的相关性系数 = 0.92</strong>。科学研究里 0.7 以上就算强相关，0.92 意味着——AI 几乎是提问者认知的放大器，近乎完美镜像。</p>
+        <p class="reveal">大模型遇强则强，遇弱则弱。问题质量直接决定模型内部激活哪些"专家"。低质量的问题，很难激活高质量的答案。</p>
+
+        <h2 class="reveal">二、我的提问模式自查</h2>
+        <p class="reveal">拿这个系数照了照自己，我的提问大致分三类：</p>
+        <ul class="reveal">
+          <li><strong>A 类（操作型）</strong>——"怎么做""如何用"。占大多数。能用，但 AI 只能给说明书式的回答。</li>
+          <li><strong>B 类（连接型）</strong>——"这个能不能跟 XX 结合"。偶尔出现，开始有自己的思考在里面。</li>
+          <li><strong>C 类（深度型）</strong>——"要是没有这些杠杆，我又能干什么"。极少见。而且严格说，这类问题不是问 AI 的，是问自己的。</li>
+        </ul>
+        <p class="reveal">结论：提问能力不差，但没被有意识地开发。最大的短板是习惯性问"怎么做"，而不是"为什么"。</p>
+        <p class="reveal">使用原则很简单：A 类日常省力，完全没问题；但<strong>当你需要 C 类答案时，必须问 C 类问题</strong>。不是每个问题都要 C 类，而是要知道什么时候该切换。</p>
+
+        <h2 class="reveal">三、认知边界能探索吗</h2>
+        <p class="reveal">顺着这个想下去，我问了自己一个问题：认知边界到底能不能被探索？</p>
+        <p class="reveal">我先想到的是：可能是伪命题——人在没有参照物的时候，根本不知道自己不知道什么。</p>
+        <p class="reveal">然后我问了另一个模型，它给了相反的回答：是真命题——<strong>"不知道自己不知道什么"这个状态本身，就是被框在认知边界里的终极证明。</strong>它打了个比方：鱼在出水之前无法感知水，但它对世界的认知确实被水限制着。你不需要看到脑后，才知道视野有边界。</p>
+        <p class="reveal">后来我想通了：这两个回答其实不矛盾。一个回答的是"认知边界是否存在"（存在），一个回答的是"认知边界能否被直接探索"（不能，只能碰撞）。</p>
+
+        <h2 class="reveal">四、四种探测器，都有缺陷</h2>
+        <table class="reveal">
+          <thead><tr><th>方法</th><th>原理</th><th>适合场景</th></tr></thead>
+          <tbody>
+            <tr><td>费曼检验</td><td>说不清楚 = 没真懂</td><td>你以为你懂的东西</td></tr>
+            <tr><td>连问五次为什么</td><td>第三层卡住 = 只记了结论</td><td>你信奉的观点</td></tr>
+            <tr><td>预测测试</td><td>预测错了 = 认知有缺口</td><td>你要做的决策</td></tr>
+            <tr><td>找矛盾</td><td>两个信念打架 = 都没想透</td><td>你的价值观</td></tr>
+          </tbody>
+        </table>
+        <p class="reveal">这四种方法有一个共同缺陷：<strong>全部靠自己</strong>。只能找到"知道自己不知道的"，找不到"不知道自己不知道的"。</p>
+        <p class="reveal">所以必须补充外部输入：找观点完全不同的人聊天，去看高手怎么做同样的事——以及最准的一种：<strong>去实际做一个东西，看哪里卡住。行动是最高精度的探测器。</strong></p>
+
+        <h2 class="reveal">五、黑暗地图</h2>
+        <p class="reveal">聊到这里，一个比喻自己冒了出来：</p>
+        <blockquote class="reveal">
+          <p>认知是一张漆黑的地图。我学过的每一个知识、每一次思考，都是在点亮地图。尚未被点亮的地方，就是认知和思维的边界。</p>
+        </blockquote>
+        <p class="reveal">这个比喻有三层意思：</p>
+        <ul class="reveal">
+          <li><strong>地图是无限大的。</strong>没有人能学尽所有知识，选择点亮哪一块，比拼命多亮几块更重要。</li>
+          <li><strong>亮着的地方，亮度不一样。</strong>背了定义是微光；能解释给别人听是灯泡；实际用它做过决策是火炬；能教别人用它做决策，才算太阳。</li>
+          <li><strong>知识和认知不是一回事。</strong>知道一个事实，和理解它为什么重要、怎么用，是两回事。</li>
+        </ul>
+
+        <hr class="reveal">
+
+        <p class="reveal em-note">行动启示：不相关的区域不用去亮。把跟自己有关的那几块从微光变成火炬——如无必要，勿增实体。</p>
+        <p class="reveal em-note">这篇文章的轨迹：寓言 Prompt → 提问能力评估 → 认知边界是不是伪命题 → 黑暗地图。起点是 A 类问题，终点是 C 类问题。地图没变大多少，但有两块区域，从微光变成了灯泡。</p>
+      </div>
+
+      <nav class="post-nav reveal">
+        <a href="fudu.html">← 上一篇：复读与不复读</a>
+        <a href="../blog.html">全部文章</a>
+        <a href="last-mile.html">下一篇：AI 的最后一公里 →</a>
+      </nav>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"把跟自己有关的那几块，从微光变成火炬。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../projects.html">项目</a></li>
+        <li><a href="../resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI 协作完成</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="../assets/main.js"></script>
+</body>
+</html>

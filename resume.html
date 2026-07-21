@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简历 — 朱梓健</title>
+<meta name="description" content="朱梓健的简历：软件技术专业，AI 应用实施 / 技术支持方向，期望城市大连。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="resume">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index">首页</a></li>
+      <li><a href="projects.html" data-page="projects">项目</a></li>
+      <li><a href="blog.html" data-page="blog">博客</a></li>
+      <li><a href="resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<header class="resume-head">
+  <div class="container">
+    <p class="hero-eyebrow reveal">Resume</p>
+    <h1 class="reveal" style="--d:.08s">朱梓健</h1>
+    <div class="resume-contact reveal" style="--d:.16s">
+      <button class="copy-btn" data-copy="13309804550" title="点击复制电话">13309804550</button>
+      <button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button>
+      <a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">github.com/SaltedFish-ZZJ ↗</a>
+      <span>男 · 21 岁 · 大连</span>
+    </div>
+    <p class="hero-role reveal" style="--d:.24s">
+      求职意向：实施工程师 / IT 技术支持 / 技术文档工程师
+      <span class="sep"></span>
+      期望城市：大连
+      <span class="sep"></span>
+      期望薪资：5-7K
+    </p>
+    <div class="resume-bar reveal" style="--d:.3s">
+      <button class="btn" onclick="window.print()">打印 / 导出 PDF</button>
+      <a class="btn btn-ghost" href="index.html">← 返回首页</a>
+    </div>
+  </div>
+</header>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">个人优势</h2>
+    <div class="adv-grid">
+      <p class="adv reveal"><b>AI 杠杆式开发</b> —— 能利用 AI 工具将模糊需求在短时间内转化为可运行原型，同时具备独立审查 AI 生成代码、定位并修补逻辑漏洞的 Debug 能力，实现"人控 AI"的高效闭环。</p>
+      <p class="adv reveal" style="--d:.08s"><b>工程规范严谨</b> —— 每个项目均配套完整 README、测试用例（累计 180+）、项目配置与打包规范，代码可维护性强。</p>
+      <p class="adv reveal" style="--d:.16s"><b>现场适应力</b> —— 可接受大连本地及周边出差，适应服务器环境部署、技术沟通与客户现场服务，有志愿者服务经验。</p>
+      <p class="adv reveal" style="--d:.24s"><b>稳定性</b> —— 明确选择大连作为长期发展城市，家人支持，愿意从基层做起。</p>
+    </div>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">项目经验</h2>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>AI 故事知识库系统</h3>
+        <span class="when">2026.06 · 独立主导</span>
+      </div>
+      <p class="sub">Python / DeepSeek API / 长文本处理</p>
+      <p style="font-size:.92rem; color:var(--txt);">AI 驱动的长文本分析系统，支持对 80 万字级文本（如《红楼梦》）进行智能分析。采用重叠窗口分块算法处理超长文本，自动提取人物关系、设定标签、生成 Obsidian 知识库，可视化角色成长曲线，支持增量分析和多格式导出。</p>
+      <ul>
+        <li>设计并实现重叠窗口分块 + 前文摘要传递机制，独立解决跨块实体对齐问题，保证人物关系不丢失</li>
+        <li>对接 DeepSeek API 完成实体提取、关系分析和情节总结的完整 Pipeline，支持部署为 Linux 定时任务</li>
+        <li>实现分析结果缓存和增量更新，重复分析速度提升 100 倍</li>
+        <li>输出完整项目文档、API 对接说明及用户手册，具备交付级文档能力</li>
+      </ul>
+    </div>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>Terminal Tarot — 终端塔罗牌 AI 解读工具</h3>
+        <span class="when">2026.06 · 独立主导 · <a href="https://github.com/SaltedFish-ZZJ/terminal-tarot" target="_blank" rel="noopener">已开源 ↗</a></span>
+      </div>
+      <p class="sub">Python / Rich TUI / API 集成</p>
+      <p style="font-size:.92rem; color:var(--txt);">已发布至 GitHub 的终端交互式应用。用户通过键盘完成 78 张牌的选择、牌阵占卜、历史记录查看，系统调用 AI 生成个性化解读。</p>
+      <ul>
+        <li>78 张完整塔罗牌数据模型，ANSI 24 位真彩色像素渲染</li>
+        <li>对接 DeepSeek API 实现 AI 解读，设计离线降级机制（API 异常时切换本地规则），保障无网络可用</li>
+        <li>148 个 pytest 测试用例覆盖核心逻辑与边界异常，pyproject.toml 标准打包，支持 pip install 一键安装</li>
+        <li>源码内置详细日志，便于用户反馈问题时快速定位，模拟技术支持中的故障排查流程</li>
+      </ul>
+    </div>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>AI 每日简报生成器</h3>
+        <span class="when">2026.05 · 独立主导 · <a href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">已开源 ↗</a></span>
+      </div>
+      <p class="sub">Python / RSS 聚合 / AI 合成</p>
+      <p style="font-size:.92rem; color:var(--txt);">多源信息聚合工具，从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，经 AI 筛选和合成，输出 5 分钟可读简报。</p>
+      <ul>
+        <li>模块化三层架构（sources / engine / output），支持信息源插拔式扩展</li>
+        <li>双轨抓取（RSS + API），Prompt 工程实现 30 条 → 5 条智能精选</li>
+        <li>完整自动化流程，支持部署为 Linux Crontab 定时任务，满足自动化运维场景</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">技术能力</h2>
+    <table class="reveal" style="width:100%; border-collapse:collapse; font-size:.92rem;">
+      <tbody>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650; width:9rem;">AI 与工程化</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">AI 驱动全流程（需求 → 生成 → 审查 → 重构）；独立 Debug 与异常修补；API 对接与错误处理</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Python 工程</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">独立完成 4 个完整项目；Rich TUI 开发；pytest 测试（148+ 用例）；pip 打包发布；模块化架构设计</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">运维与工具</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">Linux 常用命令、日志分析（grep / awk）、Git / GitHub、API 调试（httpx / curl）、Shell 脚本基础</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">前端基础</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">HTML / CSS / JavaScript；ES6 模块化开发；Flask 全栈（本网站即手写 HTML 构建）</td></tr>
+        <tr><td style="padding:.7rem .8rem; font-weight:650;">文档与软技能</td><td style="padding:.7rem .8rem; color:var(--txt);">完整项目 README 与用户手册输出；快速原型能力；降级方案设计；现场服务意识（志愿者经历）</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <div class="reveal" style="display:grid; grid-template-columns: 1fr 1fr; gap: 0 4rem;">
+      <div>
+        <h2 style="margin-bottom:1.2rem;">教育经历</h2>
+        <div class="resume-item">
+          <div class="resume-item-head">
+            <h3>北京科技职业学院</h3>
+            <span class="when">2023 - 2026</span>
+          </div>
+          <p class="sub">软件技术 · 大专</p>
+          <p style="font-size:.875rem; color:var(--txt);">在校课程：HarmonyOS 开发、机器学习应用、微信小程序、C 语言、软件工程实践、Linux 操作系统</p>
+        </div>
+        <h2 style="margin: 2rem 0 1.2rem;">资格证书</h2>
+        <p style="font-size:.92rem; color:var(--txt);">普通话二级乙等</p>
+      </div>
+      <div>
+        <h2 style="margin-bottom:1.2rem;">志愿者经历</h2>
+        <div class="resume-item">
+          <div class="resume-item-head">
+            <h3>北京天坛志愿者</h3>
+            <span class="when">2025.06</span>
+          </div>
+          <p class="sub">游客引导与现场服务</p>
+          <ul>
+            <li>在高峰客流中快速识别游客情绪，提供有效引导方案，累计服务超 500 人次</li>
+            <li>锻炼了现场沟通与同理心，可胜任 IT 技术支持岗位的客户对接与情绪安抚工作</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"在大连，从基层做起，慢慢长。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="blog.html">博客</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="13309804550" title="点击复制电话">13309804550</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI 协作完成</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="assets/main.js"></script>
+</body>
+</html>

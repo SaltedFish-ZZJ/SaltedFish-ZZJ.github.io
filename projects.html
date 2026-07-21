@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目 — 朱梓健</title>
+<meta name="description" content="朱梓健的项目：AI 故事知识库、Terminal Tarot、AI 每日简报，以及五问法、北极星计划等方法论。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="projects">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index">首页</a></li>
+      <li><a href="projects.html" data-page="projects">项目</a></li>
+      <li><a href="blog.html" data-page="blog">博客</a></li>
+      <li><a href="resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero page-head">
+  <div class="container">
+    <p class="hero-eyebrow">Projects</p>
+    <h1>做过的东西<span class="accent-dot">.</span></h1>
+    <p class="hero-bio">
+      每一个都是独立跑完的闭环：想清楚 → 做出来 → 写文档 → 能交付。
+      工程之外，也沉淀了几套自己反复用的方法论。
+    </p>
+  </div>
+</header>
+
+<section class="section flush">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">工程项目</h2>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj reveal" id="story-wiki" style="--d:.05s">
+        <div class="proj-top"><h3>AI 故事知识库系统</h3><span class="proj-num">2026.06 · 本地项目</span></div>
+        <p class="proj-desc">
+          AI 驱动的长文本分析系统。把 80 万字的《红楼梦》喂进去，自动提取人物关系、设定标签，
+          生成 Obsidian 知识库，可视化角色成长曲线。
+        </p>
+        <p class="proj-desc">
+          核心是自己设计的<strong>重叠窗口分块 + 前文摘要传递</strong>机制，解决跨块实体对齐——
+          人物关系不丢。增量缓存让重复分析快了 100 倍，可部署为 Linux 定时任务。
+          配套完整 README、API 对接说明和用户手册。
+        </p>
+        <div class="proj-foot">
+          <span class="tag">Python</span><span class="tag">DeepSeek API</span><span class="tag">长文本处理</span><span class="tag">Obsidian</span>
+          <span class="proj-link">交付级文档</span>
+        </div>
+      </div>
+
+      <div class="proj reveal" id="tarot" style="--d:.12s">
+        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/terminal-tarot" target="_blank" rel="noopener">Terminal Tarot</a></h3><span class="proj-num">2026.06 · GitHub</span></div>
+        <p class="proj-desc">
+          终端里的塔罗牌占卜应用。键盘完成 78 张牌的选牌、牌阵、历史记录，调用 AI 生成个性化解读。
+          ANSI 24 位真彩色像素渲染，在终端里画出牌面。
+        </p>
+        <p class="proj-desc">
+          设计了<strong>离线降级机制</strong>：API 挂了自动切本地规则解读，没网也能用。
+          148 个 pytest 用例覆盖核心逻辑与边界异常，标准 pyproject 打包，<code>pip install</code> 一键安装。
+        </p>
+        <div class="proj-foot">
+          <span class="tag">Rich TUI</span><span class="tag">API 集成</span><span class="tag">pytest ×148</span><span class="tag">pip 打包</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/terminal-tarot" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <div class="proj reveal" id="daily" style="--d:.05s">
+        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">AI 每日简报生成器</a></h3><span class="proj-num">2026.05 · GitHub</span></div>
+        <p class="proj-desc">
+          多源信息聚合工具。从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，
+          经 AI 筛选合成，30 条压成 5 条，输出 5 分钟可读的简报。
+        </p>
+        <p class="proj-desc">
+          模块化三层架构（sources / engine / output），信息源插拔式扩展；
+          RSS + API 双轨抓取。完整自动化流程，可部署为 Crontab 定时任务，足不出户天下知。
+        </p>
+        <div class="proj-foot">
+          <span class="tag">RSS 聚合</span><span class="tag">Prompt 工程</span><span class="tag">Crontab</span><span class="tag">模块化架构</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <div class="proj reveal" style="--d:.12s">
+        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/win11-update-killer" target="_blank" rel="noopener">Win11 Update Killer</a></h3><span class="proj-num">2026 · GitHub</span></div>
+        <p class="proj-desc">
+          Windows 更新管理脚本集：一键禁用 / 启用 / 清理系统更新。
+          写它的初衷很朴素——电脑总在干活的时候自己重启。
+        </p>
+        <p class="proj-desc">
+          小工具，但涉及注册表和服务管理，需要对 Windows 系统机制有准确理解。
+          脚本都写了开关可回退，不做一锤子买卖。
+        </p>
+        <div class="proj-foot">
+          <span class="tag">Windows</span><span class="tag">Shell 脚本</span><span class="tag">系统运维</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/win11-update-killer" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section tinted">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">方法论</h2>
+    </div>
+    <div class="method-grid">
+
+      <div class="method reveal" id="five" style="--d:.05s">
+        <span class="glyph">①</span>
+        <h3>五问法</h3>
+        <p>
+          六个固定问题——是什么、给谁用、要什么、不要什么、像什么、怎么算做好——
+          把任何模糊想法变成 AI 能直接执行的清晰指令。
+        </p>
+        <p style="margin-top: .6rem;">
+          已经跑通了四个项目。模糊需求先过五问，返工率肉眼可见地降。
+          它后来长成了我的 Hermes Agent skill，每次开新项目自动调用。
+        </p>
+        <p class="method-quote">"先想清楚，再动手。验收标准是最重要的——没有验收标准就没有完成。"</p>
+      </div>
+
+      <div class="method reveal" id="north-star" style="--d:.15s">
+        <span class="glyph">☄</span>
+        <h3>北极星计划</h3>
+        <p>
+          十年人生规划系统：一个北极星愿景、六个齿轮维度（安全垫 / 秩序 / 飞轮 / 信任 / 杠杆 / 锚点）、
+          三阶段推进，配季度回顾和年度胜率检查。
+        </p>
+        <p style="margin-top: .6rem;">
+          每个长期目标都设计"降级 / 基准 / 进阶"三版本冗余，不把鸡蛋放一个篮子里。
+          全部跑在 Obsidian 里，模板化可持续。
+        </p>
+        <p class="method-quote">"这份计划是提醒，不是枷锁。大方向不轻易变，细节随世界变。"</p>
+      </div>
+
+      <div class="method reveal" id="renwei" style="--d:.25s">
+        <span class="glyph">✎</span>
+        <h3>人味儿写作</h3>
+        <p>
+          一套润色原则：打磨别人的文字时，保住文字背后那个人的存在感。
+          不套模板腔，不磨平口音，把"像人写的"当成验收标准。
+        </p>
+        <p style="margin-top: .6rem;">
+          这个网站的所有文字都过了这道关——包括你正在读的这几段。
+        </p>
+        <p class="method-quote">"工具能写出通顺，写不出'这是我说的'。"</p>
+      </div>
+
+    </div>
+
+    <div class="stack reveal">
+      <span class="stack-label">STACK //</span>
+      <span class="tag">Python</span>
+      <span class="tag">pytest</span>
+      <span class="tag">Rich TUI</span>
+      <span class="tag">API 对接</span>
+      <span class="tag">Prompt 工程</span>
+      <span class="tag">Linux / Crontab</span>
+      <span class="tag">Shell</span>
+      <span class="tag">Git / GitHub</span>
+      <span class="tag">HTML / CSS / JS</span>
+      <span class="tag">Flask</span>
+      <span class="tag">Obsidian</span>
+      <span class="tag">Hermes Agent</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"做出来，远比想出来重要。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="13309804550" title="点击复制电话">13309804550</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI 协作完成</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="assets/main.js"></script>
+</body>
+</html>

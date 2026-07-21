@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 的最后一公里，是人的事 — 朱梓健</title>
+<meta name="description" content="会用工具不等于拥有能力。模型到用户之间那段路，不需要算法，需要对场景的理解。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="blog">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-page="index">首页</a></li>
+      <li><a href="../projects.html" data-page="projects">项目</a></li>
+      <li><a href="../blog.html" data-page="blog">博客</a></li>
+      <li><a href="../resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<article class="post-page">
+  <div class="container">
+    <div class="post-wrap">
+      <div class="post-meta reveal">
+        <span>2026.07.21</span>
+        <span>·</span>
+        <span>思考碎片 № 03</span>
+        <span class="tag">AI 落地</span>
+        <span class="tag">职业</span>
+      </div>
+      <h1 class="reveal" style="--d:.08s">AI 的最后一公里，是人的事</h1>
+      <p class="post-lede reveal" style="--d:.16s">
+        为什么一个没什么光环的应届生，敢把"AI 实施 / 技术支持"当成第一份工作的方向。
+        这篇是给我的答案，也顺便给你。
+      </p>
+
+      <div class="post-body">
+        <h2 class="reveal">一、0.92 的另一面</h2>
+        <p class="reveal">上一篇里聊过那个数字：人类提问质量与 AI 回答质量的相关性，0.92。</p>
+        <p class="reveal">大多数人读到这里，想到的是"那我要学会提问"。但我做了四个项目之后，想到了另一层：<strong>这个系数对使用 AI 的人成立，对给 AI 搭环境、接业务、修问题的人也成立。</strong></p>
+        <p class="reveal">同一个大模型，接进一家公司，有人用起来像魔法，有人用起来像智障。差别不在模型，在模型和用户中间的那段路——数据怎么接、流程怎么改、出了问题谁来看、员工愿不愿意用。</p>
+        <p class="reveal">这段路，行业里叫"最后一公里"。</p>
+
+        <h2 class="reveal">二、会用工具 ≠ 拥有能力</h2>
+        <p class="reveal">AI 圈现在最大的骗局，是把"会用工具"包装成了"拥有能力"。</p>
+        <p class="reveal">这话不是我说的，是 Anthropic 那份百万对话研究背后的潜台词。工具平权是暂时的：今天你会用的东西，半年后所有人都会用，效率重新回到比拼的起跑线。Token 消耗也不等于生产力——它有时候只是伪装成进步感的数字。</p>
+        <p class="reveal">战术上的勤奋（学十个工具、跑十个 demo）不如战略上的深度（打穿一个项目、一个场景）。<strong>挖多少坑不重要，挖多深才重要。</strong></p>
+        <p class="reveal">二八定律在这里被改写成了 2% 和 98%：AI 给差距加了十倍杠杆，稀缺性转移到了深度。</p>
+
+        <h2 class="reveal">三、那段路上需要什么</h2>
+        <p class="reveal">那"最后一公里"到底需要什么能力？我自己做项目时总结下来，是四件不性感的事：</p>
+        <ul class="reveal">
+          <li><strong>听得懂需求。</strong>客户说"我想要个智能的"，你得翻译成具体的输入输出。我的五问法就是干这个的——六个问题把模糊想法变成清晰指令。</li>
+          <li><strong>接得住故障。</strong>API 会挂、网络会断、数据会脏。Terminal Tarot 的离线降级机制就是为这个设计的：AI 挂了切本地规则，没网也能用。</li>
+          <li><strong>写得出文档。</strong>故事知识库项目我配了完整 README、API 对接说明和用户手册。机器不会替你去现场给用户讲怎么用。</li>
+          <li><strong>沉得下场景。</strong>每个行业的 know-how、踩过的坑、隐性知识，互联网上搜不到。这些恰好是 AI 替代不了的部分。</li>
+        </ul>
+        <p class="reveal">你会发现，这四件事没有一件需要会写 Transformer。<strong>它们需要的是：对人、对流程、对现场的理解。</strong></p>
+
+        <h2 class="reveal">四、为什么是现在</h2>
+        <p class="reveal">大厂做模型，落地的事留给小公司和个人。这段窗口期大概两三年——学院派还没介入，行业know-how还没被整理成标准答案。</p>
+        <p class="reveal">对没什么光环的人来说，这反而是个好消息：这条路不拼学历拼场景理解，不拼论文拼交付。把脑子里的隐性知识变成 AI 能调用的技能（行业里叫 Skills），就是搜不到的护城河。</p>
+
+        <h2 class="reveal">五、所以</h2>
+        <p class="reveal">我求职意向写的是实施工程师 / 技术支持。不是退而求其次，是想清楚了的选择：</p>
+        <blockquote class="reveal">
+          <p>模型会越来越强，但从模型到用户之间的那段路，永远需要有人走过去。我想做那个走过去的人。</p>
+        </blockquote>
+        <p class="reveal">AI 不会替你承担决策的责任。最后看的，还是你这个人。</p>
+
+        <hr class="reveal">
+
+        <p class="reveal em-note">如果你也在找 AI 落地方向的工作，或者你的公司正想把 AI 接进业务流程——可以聊聊。我的联系方式在<a href="../resume.html">简历页</a>。</p>
+      </div>
+
+      <nav class="post-nav reveal">
+        <a href="map.html">← 上一篇：认知是一张漆黑的地图</a>
+        <a href="../blog.html">全部文章</a>
+      </nav>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"从模型到用户之间的那段路，永远需要有人走过去。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../projects.html">项目</a></li>
+        <li><a href="../resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI 协作完成</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="../assets/main.js"></script>
+</body>
+</html>
