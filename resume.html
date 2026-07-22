@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>简历 — 朱梓健</title>
-<meta name="description" content="朱梓健的简历：软件技术专业，AI 应用实施 / 技术支持方向，期望城市大连。">
+<meta name="description" content="朱梓健的简历：软件技术专业，AI 应用开发 / Agent 工作流设计方向，期望城市大连。4 个独立交付项目、180+ 测试用例、80 万字长文本 AI 处理。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -49,30 +49,26 @@
       <span>男 · 21 岁 · 大连</span>
     </div>
     <p class="hero-role reveal" style="--d:.24s">
-      求职意向：实施工程师 / IT 技术支持 / 技术文档工程师
+      求职意向：AI 应用开发 / Agent 工作流设计 / Prompt 工程
       <span class="sep"></span>
       期望城市：大连
       <span class="sep"></span>
       期望薪资：5-7K
     </p>
-    <div class="resume-bar reveal" style="--d:.3s">
+
+    <div class="resume-highlights reveal" style="--d:.3s">
+      <div class="hl-item"><span class="hl-num">4</span><span class="hl-label">个独立交付的完整 AI 项目</span></div>
+      <div class="hl-item"><span class="hl-num">180<em>+</em></span><span class="hl-label">测试用例 · 工程严谨</span></div>
+      <div class="hl-item"><span class="hl-num">80<em>万</em></span><span class="hl-label">字长文本 AI 处理能力</span></div>
+      <div class="hl-item"><span class="hl-num">3</span><span class="hl-label">套可复用 AI 工作流方法论</span></div>
+    </div>
+
+    <div class="resume-bar reveal" style="--d:.36s">
       <button class="btn" onclick="window.print()">打印 / 导出 PDF</button>
       <a class="btn btn-ghost" href="index.html">← 返回首页</a>
     </div>
   </div>
 </header>
-
-<section class="resume-section">
-  <div class="container">
-    <h2 class="reveal">个人优势</h2>
-    <div class="adv-grid">
-      <p class="adv reveal"><b>AI 杠杆式开发</b> —— 能利用 AI 工具将模糊需求在短时间内转化为可运行原型，同时具备独立审查 AI 生成代码、定位并修补逻辑漏洞的 Debug 能力，实现"人控 AI"的高效闭环。</p>
-      <p class="adv reveal" style="--d:.08s"><b>工程规范严谨</b> —— 每个项目均配套完整 README、测试用例（累计 180+）、项目配置与打包规范，代码可维护性强。</p>
-      <p class="adv reveal" style="--d:.16s"><b>现场适应力</b> —— 可接受大连本地及周边出差，适应服务器环境部署、技术沟通与客户现场服务，有志愿者服务经验。</p>
-      <p class="adv reveal" style="--d:.24s"><b>稳定性</b> —— 明确选择大连作为长期发展城市，家人支持，愿意从基层做起。</p>
-    </div>
-  </div>
-</section>
 
 <section class="resume-section">
   <div class="container">
@@ -83,28 +79,29 @@
         <h3>AI 故事知识库系统</h3>
         <span class="when">2026.06 · 独立主导</span>
       </div>
-      <p class="sub">Python / DeepSeek API / 长文本处理</p>
-      <p style="font-size:.92rem; color:var(--txt);">AI 驱动的长文本分析系统，支持对 80 万字级文本（如《红楼梦》）进行智能分析。采用重叠窗口分块算法处理超长文本，自动提取人物关系、设定标签、生成 Obsidian 知识库，可视化角色成长曲线，支持增量分析和多格式导出。</p>
+      <p class="sub">Python / DeepSeek API / 长文本 RAG Pipeline</p>
+      <p class="proj-why"><b>为什么做：</b>想验证一个问题——AI 能不能真的"读懂"一部 80 万字的长篇小说，不是生成摘要，而是重建出人物关系网络。</p>
+      <p style="font-size:.92rem; color:var(--txt);">把《红楼梦》喂进去，自动提取人物关系与设定标签，生成结构化 Obsidian 知识库，可视化角色成长曲线。</p>
       <ul>
-        <li>设计并实现重叠窗口分块 + 前文摘要传递机制，独立解决跨块实体对齐问题，保证人物关系不丢失</li>
-        <li>对接 DeepSeek API 完成实体提取、关系分析和情节总结的完整 Pipeline，支持部署为 Linux 定时任务</li>
-        <li>实现分析结果缓存和增量更新，重复分析速度提升 100 倍</li>
-        <li>输出完整项目文档、API 对接说明及用户手册，具备交付级文档能力</li>
+        <li>设计长文本处理 Pipeline：<b>重叠窗口分块 + 前文摘要传递</b>，独立解决跨块实体对齐问题，人物关系分块后不丢失</li>
+        <li>搭建"实体提取 → 关系分析 → 情节总结"完整工作流，对接 DeepSeek API，支持部署为 Linux 定时任务</li>
+        <li>实现增量缓存，重复分析速度提升 100 倍</li>
+        <li>输出交付级文档：完整 README、API 对接说明及用户手册</li>
       </ul>
     </div>
 
     <div class="resume-item reveal">
       <div class="resume-item-head">
-        <h3>Terminal Tarot — 终端塔罗牌 AI 解读工具</h3>
+        <h3>Terminal Tarot — 终端 AI 解读工具</h3>
         <span class="when">2026.06 · 独立主导 · <a href="https://github.com/SaltedFish-ZZJ/terminal-tarot" target="_blank" rel="noopener">已开源 ↗</a></span>
       </div>
-      <p class="sub">Python / Rich TUI / API 集成</p>
-      <p style="font-size:.92rem; color:var(--txt);">已发布至 GitHub 的终端交互式应用。用户通过键盘完成 78 张牌的选择、牌阵占卜、历史记录查看，系统调用 AI 生成个性化解读。</p>
+      <p class="sub">Python / Rich TUI / API 集成与降级</p>
+      <p class="proj-why"><b>为什么做：</b>想完整跑通一个"AI 集成产品"的工程闭环——API 对接、异常降级、测试兜底、打包分发，一个都不落。</p>
+      <p style="font-size:.92rem; color:var(--txt);">已发布至 GitHub 的终端交互应用。键盘完成 78 张牌的选择、牌阵与历史记录，调用 AI 生成个性化解读。</p>
       <ul>
-        <li>78 张完整塔罗牌数据模型，ANSI 24 位真彩色像素渲染</li>
-        <li>对接 DeepSeek API 实现 AI 解读，设计离线降级机制（API 异常时切换本地规则），保障无网络可用</li>
-        <li>148 个 pytest 测试用例覆盖核心逻辑与边界异常，pyproject.toml 标准打包，支持 pip install 一键安装</li>
-        <li>源码内置详细日志，便于用户反馈问题时快速定位，模拟技术支持中的故障排查流程</li>
+        <li>设计<b>离线降级机制</b>：AI API 异常时自动切换本地规则解读，无网络仍可用</li>
+        <li>148 个 pytest 测试用例覆盖核心逻辑与边界异常，pyproject.toml 标准打包，<code>pip install</code> 一键安装</li>
+        <li>ANSI 24 位真彩色像素渲染牌面；源码内置详细日志，故障可快速定位</li>
       </ul>
     </div>
 
@@ -113,12 +110,13 @@
         <h3>AI 每日简报生成器</h3>
         <span class="when">2026.05 · 独立主导 · <a href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">已开源 ↗</a></span>
       </div>
-      <p class="sub">Python / RSS 聚合 / AI 合成</p>
-      <p style="font-size:.92rem; color:var(--txt);">多源信息聚合工具，从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，经 AI 筛选和合成，输出 5 分钟可读简报。</p>
+      <p class="sub">Python / RSS 聚合 / Prompt 工程</p>
+      <p class="proj-why"><b>为什么做：</b>信息过载。想让 AI 做我的"信息秘书"——全自动抓取、筛选、合成，每天 5 分钟读完今天。</p>
+      <p style="font-size:.92rem; color:var(--txt);">从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，经 AI 筛选合成，输出 5 分钟可读简报。</p>
       <ul>
-        <li>模块化三层架构（sources / engine / output），支持信息源插拔式扩展</li>
-        <li>双轨抓取（RSS + API），Prompt 工程实现 30 条 → 5 条智能精选</li>
-        <li>完整自动化流程，支持部署为 Linux Crontab 定时任务，满足自动化运维场景</li>
+        <li>模块化三层架构（sources / engine / output），信息源插拔式扩展</li>
+        <li>RSS + API 双轨抓取，<b>Prompt 工程实现 30 条 → 5 条智能精选</b></li>
+        <li>部署为 Crontab 定时任务，全流程无人值守</li>
       </ul>
     </div>
   </div>
@@ -129,13 +127,25 @@
     <h2 class="reveal">技术能力</h2>
     <table class="reveal" style="width:100%; border-collapse:collapse; font-size:.92rem;">
       <tbody>
-        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650; width:9rem;">AI 与工程化</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">AI 驱动全流程（需求 → 生成 → 审查 → 重构）；独立 Debug 与异常修补；API 对接与错误处理</td></tr>
-        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Python 工程</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">独立完成 4 个完整项目；Rich TUI 开发；pytest 测试（148+ 用例）；pip 打包发布；模块化架构设计</td></tr>
-        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">运维与工具</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">Linux 常用命令、日志分析（grep / awk）、Git / GitHub、API 调试（httpx / curl）、Shell 脚本基础</td></tr>
-        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">前端基础</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">HTML / CSS / JavaScript；ES6 模块化开发；Flask 全栈（本网站即手写 HTML 构建）</td></tr>
-        <tr><td style="padding:.7rem .8rem; font-weight:650;">文档与软技能</td><td style="padding:.7rem .8rem; color:var(--txt);">完整项目 README 与用户手册输出；快速原型能力；降级方案设计；现场服务意识（志愿者经历）</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650; width:9rem;">AI 工作流设计</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">需求结构化（五问法）→ Prompt 工程 → API 集成 → 降级策略 → 测试 → 交付，完整闭环独立跑通 4 次</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Agent / 自动化</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">Hermes Agent 技能编排与任务分解；模块化 Pipeline 设计；Crontab / Shell 自动化；本站即 AI 协作开发产物</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Python 工程</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">独立交付 4 个完整项目；Rich TUI 开发；pytest 测试（180+ 用例）；pip 打包发布；模块化架构</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">集成与排障</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">API 对接与错误处理（httpx / curl）；离线降级方案设计；日志分析与故障定位（grep / awk）</td></tr>
+        <tr><td style="padding:.7rem .8rem; font-weight:650;">前端与文档</td><td style="padding:.7rem .8rem; color:var(--txt);">HTML / CSS / JavaScript（本网站即手写构建）；交付级 README 与用户手册输出</td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">个人优势</h2>
+    <div class="adv-grid">
+      <p class="adv reveal"><b>AI 工作流设计能力</b> —— 我不造 AI，我是最会用 AI 的那类人。能把模糊业务需求翻译成 AI 可执行的精确指令（五问法），设计"输入 → AI 处理 → 输出"的完整工作流，并独立交付为可用产品。</p>
+      <p class="adv reveal" style="--d:.08s"><b>对 AI 能力边界的判断</b> —— 清楚 AI 能做什么、不能做什么。提问质量与回答质量 0.92 的相关性，是我在博客里写得最深的题目。设计 AI 工作流，靠的正是这份判断。</p>
+      <p class="adv reveal" style="--d:.16s"><b>工程严谨</b> —— AI 生成的我来审查，出问题的我来修补。每个项目配套测试（180+ 用例）、文档与打包规范，"人控 AI"而非"AI 控人"。</p>
+      <p class="adv reveal" style="--d:.24s"><b>稳定性</b> —— 明确选择大连作为长期发展城市，家人支持，愿意从基层做起。</p>
+    </div>
   </div>
 </section>
 
@@ -164,8 +174,8 @@
           </div>
           <p class="sub">游客引导与现场服务</p>
           <ul>
-            <li>在高峰客流中快速识别游客情绪，提供有效引导方案，累计服务超 500 人次</li>
-            <li>锻炼了现场沟通与同理心，可胜任 IT 技术支持岗位的客户对接与情绪安抚工作</li>
+            <li>高峰客流中快速识别游客情绪，提供有效引导，累计服务超 500 人次</li>
+            <li>锻炼了现场沟通与同理心，可胜任客户对接与需求沟通工作</li>
           </ul>
         </div>
       </div>
@@ -177,7 +187,7 @@
   <div class="footer-inner">
     <div>
       <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
-      <p class="footer-motto">"在大连，从基层做起，慢慢长。"</p>
+      <p class="footer-motto">"我不造 AI，我是最会用 AI 的人。"</p>
     </div>
     <div>
       <h5>站内</h5>
@@ -197,7 +207,7 @@
     </div>
     <div class="footer-bottom" style="grid-column: 1 / -1;">
       <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
-      <span>手写 HTML · 部署在 GitHub Pages · 由 AI 协作完成</span>
+      <span>本站由 AI Agent 协作开发——这本身就是我想做的事</span>
     </div>
   </div>
 </footer>
