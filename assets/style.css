@@ -274,7 +274,7 @@ a { color: inherit; text-decoration: none; }
 }
 .term-body .line { white-space: pre-wrap; word-break: break-all; }
 .t-prompt { color: var(--green); }
-.t-cmd { color: var(--ink); }
+.t-cmd { color: var(--term-txt); }
 .t-out { color: var(--term-dim); }
 .t-key { color: var(--gold); }
 .caret {
