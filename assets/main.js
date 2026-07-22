@@ -93,7 +93,7 @@
     { cls: "cmd", text: "whoami" },
     { cls: "t-out", text: "朱梓健 · 21岁 · 软件技术 · 大连" },
     { cls: "cmd", text: "cat role.txt" },
-    { cls: "t-out", text: "不造 AI，设计 AI 工作流 · 给我一个问题，我设计 AI 怎么解决它" },
+    { cls: "t-out", text: "不造 AI，让 AI 工作流跑起来 · 给我一个问题，我把它拆成步骤，让 AI 跑起来" },
     { cls: "cmd", text: "ls projects/" },
     { cls: "t-out", text: "story-wiki/  terminal-tarot/  newspaper-daily/  win11-update-killer/" },
     { cls: "cmd", text: "cat philosophy.txt" },
