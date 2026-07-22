@@ -217,8 +217,10 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
 }
 .hero-role .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--ink-3); }
-.hero-bio { margin-top: 1.8rem; max-width: 34rem; color: var(--ink-2); font-size: 1.02rem; }
+.hero-bio { margin-top: 1.8rem; max-width: 34rem; color: var(--ink-2); font-size: 1.02rem; text-indent: 2em; }
 .hero-bio strong { color: var(--ink); font-weight: 600; }
+.hero-bio .hero-em { color: var(--ink); font-weight: 800; }
+.hero-en { margin-top: .8rem; font-size: .8125rem; color: var(--ink-3); letter-spacing: .04em; }
 .hero-cta { margin-top: 2.4rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* 子页页头 */
