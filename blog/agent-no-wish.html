@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不要向 Agent 许愿 — 朱梓健</title>
+<meta name="description" content="两个月的 Agent 使用经验。从"随便做个网页"的荧光蓝开始，到 LifeOS 提示词系统，到找到和 AI 的真实分工。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+/* 主题启动：默认白天，记忆优先，?theme= 可强制预览（首屏渲染前执行，防闪烁） */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("zzj-theme"); } catch (e) {}
+  var q = new URLSearchParams(location.search).get("theme");
+  document.documentElement.setAttribute("data-theme",
+    (q === "light" || q === "dark") ? q : (t || "light"));
+})();
+</script>
+</head>
+<body data-page="blog">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-page="index">首页</a></li>
+      <li><a href="../projects.html" data-page="projects">项目</a></li>
+      <li><a href="../blog.html" data-page="blog">博客</a></li>
+      <li><a href="../resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<article class="post-page">
+  <div class="container">
+    <div class="post-wrap">
+      <div class="post-meta reveal">
+        <span>2026.07.22</span>
+        <span>·</span>
+        <span>思考碎片 № 04</span>
+        <span class="tag">Agent</span>
+        <span class="tag">提示词工程</span>
+        <span class="tag">AI</span>
+      </div>
+      <h1 class="reveal" style="--d:.08s">不要向 Agent 许愿</h1>
+      <p class="post-lede reveal" style="--d:.16s">
+        从"随便做个网页"开始，到那个一眼 AI 的蓝。两个月的 Agent 使用经验，
+        踩过的坑、摸清的边界，和对那个茫然 21 岁的自己的交代。
+      </p>
+
+      <div class="post-body">
+
+        <p class="reveal">那天我对着屏幕看了很久。</p>
+
+        <p class="reveal">刚让一个 Agent"随便做个个人网页"。它很爽快，HTML、CSS、JavaScript 全套给齐了，结构完整，能跑。</p>
+
+        <p class="reveal">配色是一种说不上来的蓝。不是哪种蓝，是那种你一看就知道"这是 AI 选的"的蓝。没有道理，就是那种感觉。</p>
+
+        <h2 class="reveal">在不同窗口之间流浪</h2>
+
+        <p class="reveal">先倒回去。</p>
+
+        <p class="reveal">半年前我用 AI，最朴素的方式：打开网页，打字，等回复。免费的，一次一个答案。ChatGPT 的额度用完就换 DeepSeek，DeepSeek 排队就换 Qwen。像在不同窗口之间流浪。</p>
+
+        <p class="reveal">那时候我不知道 Agent 是什么。不知道 AI 可以不只是"你问我答"，可以装进一个会自己干活的东西里。</p>
+
+        <h2 class="reveal">快毕业了</h2>
+
+        <p class="reveal">那阵子我快毕业了。</p>
+
+        <p class="reveal">你知道你饿不死，但也找不到什么好工作。随便找一份能糊口，可那是我想干一辈子的事情吗？不能一直在家待着，也不是长久之计。</p>
+
+        <p class="reveal">大专，不高，但好歹算半个长衫。脱下长衫我能找到什么好工作？都要脱了，当初为何还要穿上？</p>
+
+        <p class="reveal">我读过一些书。我知道资本论在说什么，我知道制度是怎么设计的。可是我读的书又不够多，学历也不够高，仅仅是民办大专。知道得太多，又不够多。卡在最难受的缝里。</p>
+
+        <blockquote class="reveal">
+          <p>谁让你读了这么多书，又知道了双水村以外还有个大世界……如果从小你就在这个天地里日出而作，日落而息，那你现在就会和众乡亲抱同一理想。</p>
+        </blockquote>
+
+        <p class="reveal">我才 21。我不知道这一生该去干什么。</p>
+
+        <p class="reveal">就是那种茫然。不是矫情，是年轻人对未来没有期待的那种。</p>
+
+        <p class="reveal">在这种茫然底下，我做了 LifeOS。</p>
+
+        <p class="reveal">不是写给别人的，是写给我自己的。我试着把"想清楚自己该干嘛"这件事，设计成一套系统。试图找回一点掌控感。</p>
+
+        <p class="reveal">导航、执行、防御、机会雷达、决策矩阵、迭代日志，六个模块。五级成长阶段，从探索到毕业。苏格拉底式提问，不替用户做决定，只问问题。</p>
+
+        <p class="reveal">我给它做了六个平台的适配版本。ChatGPT 一份，DeepSeek 一份，Qwen 一份，Gemini 一份，Grok 一份，还有一份精简版。每份的长度、格式、语气都不一样。ChatGPT 版最花哨，Gemini 版最像写代码注释，DeepSeek 版最克制。</p>
+
+        <p class="reveal">还有一个我自己挺得意的设计：毕业机制。用户成长到第五级，系统触发卸载。AI 的终极目标是让自己不被需要。</p>
+
+        <p class="reveal">我拿这些文件去申请了小米 MiMo 的 token 补贴。免费的，小米为了推广自家模型搞的活动。申请条件是：你得有一个项目，哪怕只有文件也行，或者一个 demo。</p>
+
+        <p class="reveal">过了。拿到了 pro 版本。</p>
+
+        <p class="reveal">然后我发现，AI 不只是能聊天。它能装进一个会自己干活的东西里，那东西叫 Agent。这半年，国内国外冒出来一堆能编码、能做东西的 Agent。我像是推开了一扇门，门后面是一条我之前根本不知道存在的路。</p>
+
+        <h2 class="reveal">"一句话生成应用"是个幻觉</h2>
+
+        <p class="reveal">然后是那个蓝。</p>
+
+        <p class="reveal">我后来想明白，那不是 Agent 的错。是我给了它一个"随便"。</p>
+
+        <p class="reveal">垃圾进，垃圾出。这个道理我早就知道。但 Agent 把它放大了：你给它一句话，它还你一个看起来像模像样、其实哪哪都不对的东西。而且它给得特别自信。</p>
+
+        <p class="reveal">这是最危险的地方。它不是给你一个错误的答案，它是给你一个看起来对的答案。你稍微一懒，就用出去了。</p>
+
+        <p class="reveal">所以我现在做项目，第一件事不是让它写代码，是先用五问法把需求想清楚。是什么、给谁用、要什么、不要什么、像什么、怎么算做好。六个问题答完，再让它动手。返工率肉眼可见地降。</p>
+
+        <h2 class="reveal">那些只能我来的瞬间</h2>
+
+        <p class="reveal">用了两个月，我慢慢摸清了一条线。</p>
+
+        <p class="reveal">能干的事它干得飞快。但有一类事，它一碰就露馅。感性的，不理性的，不确定的。</p>
+
+        <p class="reveal">比如我要找"AI 怎么用得更好"的文章，判断哪篇值得读、哪篇是水文，注册一堆账号试工具。这些没有标准答案，全凭感觉和经验。Agent 能帮我搜，但"值不值得"那个判断，它给不了。</p>
+
+        <p class="reveal">再比如"大连本地人"那句话。AI 帮我写简历时，顺手写了"大连本地人"。它不知道我不是。它把它当成事实写进去了。如果我没核对，这句话就上了简历，面试官一问"你家住哪"，当场穿帮。</p>
+
+        <p class="reveal">我后来定了条规矩：AI 写的每一句关于我的事实，我都要核实。简历的每一句话，都要被追问不倒。</p>
+
+        <h2 class="reveal">我和 Agent 的真实分工</h2>
+
+        <p class="reveal">两个月，四个项目。我总结出一个分工：</p>
+
+        <table class="reveal">
+          <thead><tr><th>它干</th><th>我干</th></tr></thead>
+          <tbody>
+            <tr><td>生成代码、写文档、做初稿</td><td>想清楚要什么</td></tr>
+            <tr><td>跑重复的、机械的活</td><td>判断哪些事值得做</td></tr>
+            <tr><td>给方案、给选项</td><td>拍板、核实、兜底</td></tr>
+            <tr><td>快</td><td>准</td></tr>
+          </tbody>
+        </table>
+
+        <p class="reveal">它快，我准。它生成，我判断。它不知道的事会当成知道，我知道的事它不知道。</p>
+
+        <p class="reveal">人和 AI 之间没有对立。只有分工。但那条线，永远在人这边画。</p>
+
+        <h2 class="reveal">对两个月前的自己说</h2>
+
+        <p class="reveal">如果回到两个月前，我会对当时的自己说一句：</p>
+
+        <p class="reveal">找不到工作也不用担心，慢慢找呗。</p>
+
+        <p class="reveal">然后谢谢当时那个报名了小米 token 补贴的自己。要不是那一脚，我现在可能还在不同窗口之间流浪，不知道门后面有一条路。</p>
+
+        <hr class="reveal">
+
+        <p class="reveal em-note">Agent 不是魔法。它是个特别能干、但偶尔会自信地犯傻的同事。你要做的，不是向它许愿。是管好它。就像管好那个给你一眼 AI 蓝的同事，让它重新配色。</p>
+
+      </div>
+
+      <nav class="post-nav reveal">
+        <a href="../blog.html">← 全部文章</a>
+        <a href="fudu.html">下一篇：复读与不复读 →</a>
+      </nav>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"清醒地知道自己在复读什么。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../projects.html">项目</a></li>
+        <li><a href="../resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="13309804550" title="点击复制电话">13309804550</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健 · 大连</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI Agent 协作开发——这本身就是我想做的事</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="../assets/main.js"></script>
+</body>
+</html>
