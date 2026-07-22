@@ -3,16 +3,9 @@
   "use strict";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ── 黑白切换 ── */
+  /* ── 黑白切换（初始主题由 head 启动脚本在首屏前设定，默认白天） ── */
   var root = document.documentElement;
   var THEME_KEY = "zzj-theme";
-  try {
-    var saved = localStorage.getItem(THEME_KEY);
-    if (saved) root.setAttribute("data-theme", saved);
-    /* ?theme=light/dark 可临时预览（不写入存储） */
-    var qTheme = new URLSearchParams(location.search).get("theme");
-    if (qTheme === "light" || qTheme === "dark") root.setAttribute("data-theme", qTheme);
-  } catch (e) { /* 隐私模式下 localStorage 不可用，走默认暗色 */ }
   var toggle = document.getElementById("theme-toggle");
   if (toggle) {
     toggle.addEventListener("click", function () {
