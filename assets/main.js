@@ -1,4 +1,4 @@
-/* 朱梓健 · 个人站 — 交互层 */
+/* ZZJ · 个人站 — 交互层 */
 (function () {
   "use strict";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -91,7 +91,7 @@
   var LINES = [
     { cls: "t-out", text: "# intro.sh — 30 秒认识我" },
     { cls: "cmd", text: "whoami" },
-    { cls: "t-out", text: "朱梓健 · 21岁 · 软件技术" },
+    { cls: "t-out", text: "ZZJ · 21岁 · 软件技术" },
     { cls: "cmd", text: "cat role.txt" },
     { cls: "t-out", text: "不造 AI，让 AI 工作流跑起来 · 给我一个问题，我把它拆成步骤，让 AI 跑起来" },
     { cls: "cmd", text: "ls projects/" },
