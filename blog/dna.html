@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>增长的是数据，不是代码 — ZZJ</title>
+<meta name="description" content="加一种新材料，代码几乎为零。一个像素游戏的设计哲学，怎么变成了我的一份开源 skill。从 Noita 到 DNA。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+/* 主题启动：默认白天，记忆优先，?theme= 可强制预览（首屏渲染前执行，防闪烁） */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("zzj-theme"); } catch (e) {}
+  var q = new URLSearchParams(location.search).get("theme");
+  document.documentElement.setAttribute("data-theme",
+    (q === "light" || q === "dark") ? q : (t || "light"));
+})();
+</script>
+</head>
+<body data-page="blog">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-page="index">首页</a></li>
+      <li><a href="../projects.html" data-page="projects">项目</a></li>
+      <li><a href="../blog.html" data-page="blog">博客</a></li>
+      <li><a href="../resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<article class="post-page">
+  <div class="container">
+    <div class="post-wrap">
+      <div class="post-meta reveal">
+        <span>2026.07.25</span>
+        <span>·</span>
+        <span>思考碎片 № 05</span>
+        <span class="tag">Vibe Coding</span>
+        <span class="tag">架构</span>
+        <span class="tag">AI</span>
+      </div>
+      <h1 class="reveal" style="--d:.08s">增长的是数据，不是代码</h1>
+      <p class="post-lede reveal" style="--d:.16s">
+        加一种新材料，代码几乎为零。一个像素游戏的设计哲学，
+        怎么变成了一份我开源出去的 skill。从 Noita 到 DNA。
+      </p>
+
+      <div class="post-body">
+
+        <p class="reveal">"按理说，每加一种新材料，是不是就得多写一套新系统？"</p>
+
+        <p class="reveal">B 站有个视频，讲 Noita 这个像素物理游戏为什么能不停加新材料，代码却越来越少。UP 主说到这句话的时候，把代码拉出来给你看，没怎么变长。</p>
+
+        <p class="reveal">Noita 的世界里有水、沙子、烟、火、木头、石头。每加一种材料，代码增长接近零。真正在工作的，只有两套系统。</p>
+
+        <p class="reveal">我盯着这句话看了很久。</p>
+
+        <h2 class="reveal">项目变大之后</h2>
+
+        <p class="reveal">用 AI 写代码写了几个月，最真实的感受是：小项目是真的快。说需求，出代码，能跑。</p>
+
+        <p class="reveal">但项目一大，需求一多，就变了味。代码能跑，改不动。今天加个功能，过几天不知道哪炸了。可读性和维护性，是两堵慢慢长高的墙。</p>
+
+        <p class="reveal">市面上有很多管理大型项目开发的 skill，一套很规范化的流程，挺好用的。但我总觉得，还有别的玩法。</p>
+
+        <h2 class="reveal">Noita 是怎么做的</h2>
+
+        <p class="reveal">Noita 的世界里，其实没有水。存在的只有像素。</p>
+
+        <p class="reveal">每个像素带着自己的属性：材料类型、密度、温度、生命周期。</p>
+
+        <p class="reveal">水只是 material 等于 water，密度 1.0。沙子是 material 等于 sand，密度 1.5。烟是密度极低的像素。火是带着高温和短生命周期的像素。它们本质上是同一种对象。</p>
+
+        <p class="reveal">沙子会沉到水底。没有人写"沙子遇水下沉"这条逻辑，它只是密度更大，移动系统自然让它和水交换位置。火会蔓延，是因为高温像素碰到了带可燃属性的像素。</p>
+
+        <p class="reveal">整个世界里没有水系统，没有火系统，没有烟系统。只有移动和交互两套系统。所有材料共用同一套规则。</p>
+
+        <p class="reveal">那加一种新材料，比如岩浆，要写多少代码？</p>
+
+        <p class="reveal">几乎为零。在材料数据库里加一条：密度多少，温度多少，能不能燃烧，会不会点燃别的。剩下的，已有系统全部接管。</p>
+
+        <p class="reveal">材料越加越多，代码没有指数增长。增长的只有数据。</p>
+
+        <blockquote class="reveal">
+          <p>你扩展的不是系统，是配置。</p>
+        </blockquote>
+
+        <h2 class="reveal">这让我想到了 DNA</h2>
+
+        <p class="reveal">看到这里，我脑子里蹦出四个字：排列组合。</p>
+
+        <p class="reveal">DNA 最基础的就四个碱基。四个碱基，通过固定的排列规则，诞生了伟大的生命。</p>
+
+        <p class="reveal">vibe coding 能不能也这么干？</p>
+
+        <p class="reveal">每次只设计这个项目最基础的一部分，通过修改一点参数，就能获得不同的效果。后续加新内容，不会炸出严重 bug。</p>
+
+        <p class="reveal">从"能跑能运行"，到方便维护、方便管理、方便修改。</p>
+
+        <h2 class="reveal">少，到什么程度</h2>
+
+        <p class="reveal">想通这一层，我回头又看了一遍 Noita。</p>
+
+        <p class="reveal">两套系统，撑起一个世界。水、沙、烟、火、木头、石头，全是同一套规则的参数。</p>
+
+        <p class="reveal">DNA 也是。四个碱基，排列组合，长出树、长出鱼、长出人。</p>
+
+        <p class="reveal">八卦也是。八个卦象，两两叠加，六十四卦，古人拿它解释万物。</p>
+
+        <p class="reveal">全是同一个结构：一小撮基础单元，一套固定规则，剩下的复杂性交给组合去长。</p>
+
+        <p class="reveal">那"少"到底少到什么程度？不是越少越好。少到能覆盖你要的全部情况，多到你能想得过来。我给自己定的数是：4 到 8 个组件，2 到 4 条规则。</p>
+
+        <p class="reveal">超过 8 个，脑子记不住，组合开始失控。低于 4 个，往往意味着某个组件在偷偷干好几件事。</p>
+
+        <p class="reveal">规则同理。超过 4 条，规则的组合方式本身，又变成了一种新的复杂度。</p>
+
+        <h2 class="reveal">从想法到 skill</h2>
+
+        <p class="reveal">想明白这套东西，是在看视频那天晚上。手头正好有个 vibe coding 写出来的项目，代码已经有点拧巴了。我就想，能不能按这个思路重新设计？</p>
+
+        <p class="reveal">第一步，把想法丢给 DeepSeek：像 DNA 一样，用最少的原子组件，通过组合规则长出复杂系统。它很快给出一份 prompt，四步：定义原子组件、定义组合规则、生成代码、写集成说明。</p>
+
+        <p class="reveal">看起来挺完整。</p>
+
+        <p class="reveal">但我总觉得哪里不对劲，又说不出来。像看到一张构图没问题的照片，缺个焦点。</p>
+
+        <p class="reveal">我把这份 prompt 拿给云舒，我的 Hermes Agent，让它把关。它第一句话就是：先别急着设计，你连项目长什么样都没说。</p>
+
+        <p class="reveal">然后一刀一刀来。</p>
+
+        <p class="reveal">第一刀，缺调研。prompt 一上来就让人定义原子组件，AI 对项目一无所知，只能拿通用模板套。输入处理、核心逻辑、输出。每个项目都会被拆成这三样，拆了等于没拆。</p>
+
+        <p class="reveal">第二刀，接口没格式。只说"接口清晰"，没说接口长什么样。AI 大概率给你裸 dict 加注释。看起来通了，改起来全崩。</p>
+
+        <p class="reveal">第三刀，没有交互节点。一份 prompt 要求把所有东西一次性交出来，几百行代码，我看不完，也没法改。</p>
+
+        <p class="reveal">第四刀最重。它说：你这不就是模块化吗？</p>
+
+        <p class="reveal">我没接上话。好像是，又好像不是。</p>
+
+        <p class="reveal">模块化我当然知道。高内聚，低耦合，接口清晰。这套东西和模块化共享同一套底盘。</p>
+
+        <p class="reveal">但有一个地方不一样：数量。</p>
+
+        <p class="reveal">模块化不限制模块的数量。两百个模块，照样高内聚低耦合，只是没人记得住第 157 个是干嘛的。</p>
+
+        <p class="reveal">这套方法把数量锁死了。组件 4 到 8 个，规则 2 到 4 条。锁死之后，遇到新需求，第一反应不是"加个组件"，而是"现有的这些，能不能组合出来"。</p>
+
+        <p class="reveal">一个是加法，一个是乘法。加法的代码变长，乘法的功能变多。</p>
+
+        <p class="reveal">想明白这一点，我踏实了。又来回磨了几轮，把那份 prompt 补齐：调研、接口格式、每一步留确认节点。改到最后，prompt 比原来长了一倍，但每一条都有用。</p>
+
+        <p class="reveal">这大概也算少即是多：字数变多了，是因为每句话都在消灭不确定性。</p>
+
+        <h2 class="reveal">现在的样子</h2>
+
+        <p class="reveal">最后落成两份东西。</p>
+
+        <p class="reveal">一份是 prompt，粘贴到任何 AI 都能用。流程是：先调研，再定义 4-8 个原子组件，每个组件写明接口契约（输入、输出、错误、副作用、可测试性），再定义不超过 4 条组合规则（顺序、条件、循环、并行），最后逐个生成代码。每走一步，等确认。</p>
+
+        <p class="reveal">一份是 skill，装进了 Hermes。以后我只要说一句"用 DNA 架构设计"，它就会按这个流程走。不跳过调研，不用裸 dict 当接口，不一次性甩一堆代码。</p>
+
+        <p class="reveal">核心约束，一张表就说完了：</p>
+
+        <table class="reveal">
+          <thead><tr><th>约束</th><th>值</th></tr></thead>
+          <tbody>
+            <tr><td>原子组件数</td><td>4-8 个</td></tr>
+            <tr><td>组合规则数</td><td>≤ 4 条（顺序 / 条件 / 循环 / 并行）</td></tr>
+            <tr><td>接口</td><td>typed 类型，不用裸 dict</td></tr>
+            <tr><td>状态</td><td>组件间不共享可变状态</td></tr>
+            <tr><td>可测性</td><td>每个组件独立可运行、可测试</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="reveal">附录</h2>
+
+        <p class="reveal">完整 skill 和提示词放在 GitHub，MIT 协议，随便拿去用：</p>
+
+        <p class="reveal"><a href="https://github.com/SaltedFish-ZZJ/dna-architecture-skill" target="_blank" rel="noopener">github.com/SaltedFish-ZZJ/dna-architecture-skill ↗</a></p>
+
+        <hr class="reveal">
+
+        <p class="reveal em-note">那个视频里还有一句话："每个像素都遵守同一套规则。因为有这套统一的规则，开发者才能不停往世界里加材料，而不需要每次都重建底层。"</p>
+
+        <p class="reveal em-note">代码架构也是。规则越少越统一，加新东西就越便宜。增长的只有数据，重建的从来不是底层。</p>
+      </div>
+
+      <nav class="post-nav reveal">
+        <a href="../blog.html">← 全部文章</a>
+        <a href="agent-no-wish.html">下一篇：不要向 Agent 许愿 →</a>
+      </nav>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"增长的只有数据，重建的从来不是底层。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../projects.html">项目</a></li>
+        <li><a href="../resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="Z13394200577" title="点击复制微信">Z13394200577</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> ZZJ</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI Agent 协作开发——这本身就是我想做的事</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="../assets/main.js"></script>
+</body>
+</html>
