@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>更多小工具 — ZZJ</title>
+<meta name="description" content="ZZJ的更多小工具：AI 每日简报生成器、Win11 Update Killer 等实用小工具。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+/* 主题启动：默认白天，记忆优先，?theme= 可强制预览（首屏渲染前执行，防闪烁） */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("zzj-theme"); } catch (e) {}
+  var q = new URLSearchParams(location.search).get("theme");
+  document.documentElement.setAttribute("data-theme",
+    (q === "light" || q === "dark") ? q : (t || "light"));
+})();
+</script>
+</head>
+<body data-page="projects">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index">首页</a></li>
+      <li><a href="projects.html" data-page="projects">项目</a></li>
+      <li><a href="blog.html" data-page="blog">博客</a></li>
+      <li><a href="resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero page-head">
+  <div class="container">
+    <p class="hero-eyebrow">More Tools</p>
+    <h1>更多小工具<span class="accent-dot">.</span></h1>
+    <p class="hero-bio">
+      主业之外顺手做的小东西——解决一个具体的痛点，代码量不大，但每件都真正被用着。
+      每个工具都有 GitHub 仓库，点进去能看源码。
+    </p>
+    <p class="hero-bio" style="margin-top:.5rem">
+      <a class="inline-link" href="projects.html">&larr; 返回项目主页</a>
+    </p>
+  </div>
+</header>
+
+<section class="section flush">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">小工具</h2>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj reveal" id="daily" style="--d:.05s">
+        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">AI 每日简报生成器</a></h3><span class="proj-num">2026.05 · GitHub</span></div>
+        <p class="proj-why"><b>为什么做：</b>信息过载。想让 AI 做我的"信息秘书"——全自动抓取、筛选、合成，每天 5 分钟读完今天。</p>
+        <p class="proj-desc">
+          多源信息聚合工具。从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，
+          经 AI 筛选合成，30 条压成 5 条，输出 5 分钟可读的简报。
+        </p>
+        <p class="proj-desc">
+          模块化三层架构（sources / engine / output），信息源插拔式扩展；
+          RSS + API 双轨抓取。完整自动化流程，可部署为 Crontab 定时任务。
+        </p>
+        <div class="proj-foot">
+          <span class="tag">RSS 聚合</span><span class="tag">Prompt 工程</span><span class="tag">Crontab</span><span class="tag">模块化架构</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <div class="proj reveal" style="--d:.15s">
+        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/win11-update-killer" target="_blank" rel="noopener">Win11 Update Killer</a></h3><span class="proj-num">2026 · GitHub</span></div>
+        <p class="proj-why"><b>为什么做：</b>电脑总在干活的时候自己重启。这个痛点我受够了，就用脚本把它解决掉。</p>
+        <p class="proj-desc">
+          Windows 更新管理脚本集：一键禁用 / 启用 / 清理系统更新。
+        </p>
+        <p class="proj-desc">
+          小工具，但涉及注册表和服务管理，需要对 Windows 系统机制有准确理解。
+          脚本都写了开关可回退，不做一锤子买卖。
+        </p>
+        <div class="proj-foot">
+          <span class="tag">Windows</span><span class="tag">Shell 脚本</span><span class="tag">系统运维</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/win11-update-killer" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"做出来，远比想出来重要。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="resume.html">简历</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="13394200577" title="点击复制电话">13394200577</button></li>
+        <li><button class="copy-btn" data-copy="Z13394200577" title="点击复制微信">Z13394200577</button></li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> ZZJ</span>
+      <span>手写 HTML · 部署在 GitHub Pages · 由 AI Agent 协作开发——这本身就是我想做的事</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="assets/main.js"></script>
+</body>
+</html>

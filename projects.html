@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>项目 — ZZJ</title>
-<meta name="description" content="ZZJ的项目：AI 故事知识库、Terminal Tarot、AI 每日简报，以及五问法、北极星计划等方法论。">
+<meta name="description" content="ZZJ的项目：长辈电脑教程、网易云音乐博物馆、AI 故事知识库、Terminal Tarot，以及五问法、北极星计划等方法论。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -93,10 +93,10 @@
       </div>
 
       <div class="proj reveal" id="story-wiki" style="--d:.12s">
-        <div class="proj-top"><h3>AI 故事知识库系统</h3><span class="proj-num">2026.06 · 本地项目</span></div>
+        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/story_wiki" target="_blank" rel="noopener">AI 故事知识库系统</a></h3><span class="proj-num">2026.06 · GitHub</span></div>
         <p class="proj-why"><b>为什么做：</b>验证 AI 能否真正"读懂"一部 80 万字的长篇小说——不是生成摘要，而是重建出人物关系网络。</p>
         <p class="proj-desc">
-          把 80 万字的《红楼梦》喂进去，自动提取人物关系、设定标签，
+          把 82 万字的《平凡的世界》喂进去，自动提取人物关系、角色对话、设定标签，
           生成 Obsidian 知识库，可视化角色成长曲线。
         </p>
         <p class="proj-desc">
@@ -105,8 +105,8 @@
           配套完整 README、API 对接说明和用户手册。
         </p>
         <div class="proj-foot">
-          <span class="tag">Python</span><span class="tag">DeepSeek API</span><span class="tag">长文本处理</span><span class="tag">Obsidian</span>
-          <span class="proj-link">交付级文档</span>
+          <span class="tag">Python</span><span class="tag">DeepSeek API</span><span class="tag">长文本处理</span><span class="tag">pytest ×587</span>
+          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/story_wiki" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
         </div>
       </div>
 
@@ -127,40 +127,19 @@
         </div>
       </div>
 
-      <div class="proj reveal" id="daily" style="--d:.05s">
-        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">AI 每日简报生成器</a></h3><span class="proj-num">2026.05 · GitHub</span></div>
-        <p class="proj-why"><b>为什么做：</b>信息过载。想让 AI 做我的"信息秘书"——全自动抓取、筛选、合成，每天 5 分钟读完今天。</p>
+      <div class="proj reveal" id="more" style="--d:.05s">
+        <div class="proj-top"><h3><a href="tools.html">更多小工具</a></h3><span class="proj-num">实用小工具合集</span></div>
         <p class="proj-desc">
-          多源信息聚合工具。从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，
-          经 AI 筛选合成，30 条压成 5 条，输出 5 分钟可读的简报。
-        </p>
-        <p class="proj-desc">
-          模块化三层架构（sources / engine / output），信息源插拔式扩展；
-          RSS + API 双轨抓取。完整自动化流程，可部署为 Crontab 定时任务，足不出户天下知。
+          主业之外顺手做的小东西——解决具体痛点，代码量不大，但每件都真正被用着。
+          目前有 AI 每日简报生成器、Win11 Update Killer 两个。
         </p>
         <div class="proj-foot">
-          <span class="tag">RSS 聚合</span><span class="tag">Prompt 工程</span><span class="tag">Crontab</span><span class="tag">模块化架构</span>
-          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+          <span class="tag">Python</span><span class="tag">Shell</span><span class="tag">Windows</span>
+          <a class="proj-link" href="tools.html">查看全部 <span class="arr">→</span></a>
         </div>
       </div>
 
-      <div class="proj reveal" style="--d:.12s">
-        <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/win11-update-killer" target="_blank" rel="noopener">Win11 Update Killer</a></h3><span class="proj-num">2026 · GitHub</span></div>
-        <p class="proj-why"><b>为什么做：</b>电脑总在干活的时候自己重启。这个痛点我受够了，就用脚本把它解决掉。</p>
-        <p class="proj-desc">
-          Windows 更新管理脚本集：一键禁用 / 启用 / 清理系统更新。
-        </p>
-        <p class="proj-desc">
-          小工具，但涉及注册表和服务管理，需要对 Windows 系统机制有准确理解。
-          脚本都写了开关可回退，不做一锤子买卖。
-        </p>
-        <div class="proj-foot">
-          <span class="tag">Windows</span><span class="tag">Shell 脚本</span><span class="tag">系统运维</span>
-          <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/win11-update-killer" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
-        </div>
-      </div>
-
-    </div>
+          </div>
   </div>
 </section>
 
