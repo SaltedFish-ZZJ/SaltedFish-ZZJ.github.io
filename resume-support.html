@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简历（实施 / 技术支持）— 朱梓健</title>
+<meta name="description" content="朱梓健的简历：实施 / 技术支持方向。集成与排障、离线降级、日志分析、现场沟通，4 个独立交付项目。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+/* 主题启动：默认白天，记忆优先，?theme= 可强制预览（首屏渲染前执行，防闪烁） */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("zzj-theme"); } catch (e) {}
+  var q = new URLSearchParams(location.search).get("theme");
+  document.documentElement.setAttribute("data-theme",
+    (q === "light" || q === "dark") ? q : (t || "light"));
+})();
+</script>
+</head>
+<body data-page="resume">
+<div id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index">首页</a></li>
+      <li><a href="projects.html" data-page="projects">项目</a></li>
+      <li><a href="blog.html" data-page="blog">博客</a></li>
+      <li><a href="resume.html" data-page="resume">简历</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换黑白主题" title="切换黑白主题">
+      <span class="icon i-moon">&#9790;</span><span class="icon i-sun">&#9728;</span>
+    </button>
+  </div>
+</nav>
+
+<header class="resume-head">
+  <div class="container">
+    <div class="resume-switch reveal">
+      <a href="resume.html">开发方向</a>
+      <a href="resume-support.html" class="active">实施 / 技术支持方向</a>
+    </div>
+    <p class="hero-eyebrow reveal">Resume · 实施 / 技术支持</p>
+    <h1 class="reveal" style="--d:.08s">朱梓健</h1>
+    <div class="resume-contact reveal" style="--d:.16s">
+      <button class="copy-btn" data-copy="13394200577" title="点击复制电话">13394200577</button>
+      <button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button>
+      <button class="copy-btn" data-copy="Z13394200577" title="点击复制微信">Z13394200577</button>
+      <a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">github.com/SaltedFish-ZZJ ↗</a>
+      <span>男 · 21 岁</span>
+    </div>
+    <p class="hero-role reveal" style="--d:.24s">
+      求职意向：实施工程师 / 技术支持 / 售前
+      <span class="sep"></span>
+      随时可到岗 · 可接受出差驻场
+    </p>
+
+    <div class="resume-highlights reveal" style="--d:.3s">
+      <div class="hl-item"><span class="hl-num">500<em>+</em></span><span class="hl-label">人次现场服务 · 沟通有底</span></div>
+      <div class="hl-item"><span class="hl-num">4</span><span class="hl-label">个独立交付并部署的项目</span></div>
+      <div class="hl-item"><span class="hl-num">780</span><span class="hl-label">测试用例兜底 · 排障有据</span></div>
+      <div class="hl-item"><span class="hl-num">2</span><span class="hl-label">套降级 / 容错方案落地</span></div>
+    </div>
+
+    <div class="resume-bar reveal" style="--d:.36s">
+      <button class="btn" onclick="window.print()">打印 / 导出 PDF</button>
+      <a class="btn btn-ghost" href="index.html">← 返回首页</a>
+    </div>
+  </div>
+</header>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">核心能力</h2>
+    <table class="reveal" style="width:100%; border-collapse:collapse; font-size:.92rem;">
+      <tbody>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650; width:9rem;">集成与排障</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">API 对接与错误处理（httpx / curl）；异常收窄与友好化提示；源码内置日志，故障靠日志快速定位（grep / awk）</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">离线降级</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">AI 服务不可用时自动切换本地规则兜底，无网络仍可用；终端尺寸不足自动降级为文字列表</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">部署与运维</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">Linux / Crontab 定时任务无人值守；pyproject 标准打包、pip 一键安装；Windows 兼容问题（渲染异常、中文对齐）定位修复</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">文档交付</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">交付级 README、API 对接说明、用户手册；能把技术讲成不懂技术的人也听得懂的话</td></tr>
+        <tr><td style="padding:.7rem .8rem; font-weight:650;">现场沟通</td><td style="padding:.7rem .8rem; color:var(--txt);">北京天坛志愿者，500+ 人次现场服务，快速识别用户卡点，把复杂的说简单</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">项目经验</h2>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>Terminal Tarot — 终端 AI 工具</h3>
+        <span class="when">2026.06 · 独立主导 · <a href="https://github.com/SaltedFish-ZZJ/terminal-tarot" target="_blank" rel="noopener">已开源 ↗</a></span>
+      </div>
+      <p class="sub">Python / Rich TUI / API 集成与降级</p>
+      <p class="proj-why"><b>为什么做：</b>把一个"依赖外部 AI 服务"的产品做到真正稳——服务挂了不崩、出错了查得到、装得上一键跑。</p>
+      <p style="font-size:.92rem; color:var(--txt);">终端里的塔罗牌 AI 解读应用，已发布至 GitHub。键盘完成 78 张牌的选牌、牌阵与历史记录。</p>
+      <ul>
+        <li>设计<b>离线降级机制</b>：AI API 异常时自动切换本地规则解读，没网也能用——解决"外部服务一断就废"的问题</li>
+        <li>源码内置<b>详细日志</b>，用户报错时能靠日志快速定位故障点，而不是瞎猜</li>
+        <li>逐个修复真实兼容 bug：Windows 下 prompt_toolkit 渲染异常、CJK 中文宽度对齐、AI 报错信息友好化</li>
+        <li>148 个 pytest 用例覆盖核心逻辑与边界异常，改一处能立刻知道有没有改坏；pyproject 标准打包，<code>pip install</code> 一键安装</li>
+      </ul>
+    </div>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>长辈电脑教程 — 让不懂技术的人用起来</h3>
+        <span class="when">2026.07 · 独立主导 · <a href="pc-tutorial/" target="_blank" rel="noopener">在线体验 ↗</a></span>
+      </div>
+      <p class="sub">TypeScript / Vite / 数据驱动</p>
+      <p class="proj-why"><b>为什么做：</b>爸妈只会开关机，电话里教十遍记不住一遍。干脆做一个他们能自己点着玩、点错也不会坏的东西。</p>
+      <p style="font-size:.92rem; color:var(--txt);">在浏览器里模拟 Win10 桌面，引导式教程教长辈用电脑。3 门课 31 步：鼠标键盘、文件整理、上网搜索、出了问题怎么办。</p>
+      <ul>
+        <li>站在"完全不懂电脑的人"的角度设计每一步，怎么点都不会弄坏——这是给非技术用户做引导的完整案例</li>
+        <li>大字体、进度自动记忆、自由探索，43 个测试用例兜底课程逻辑</li>
+        <li>DNA 架构：加一门课只需加一份数据，组件代码零改动，便于后续扩展维护</li>
+      </ul>
+    </div>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>AI 故事知识库系统</h3>
+        <span class="when">2026.06 · 独立主导</span>
+      </div>
+      <p class="sub">Python / DeepSeek API / 长文本 Pipeline</p>
+      <p class="proj-why"><b>为什么做：</b>验证一个长文本任务能不能稳定跑完——82 万字输入，几十次 API 调用，中间任何一步出错都不能白跑。</p>
+      <p style="font-size:.92rem; color:var(--txt);">把 82 万字的《平凡的世界》喂进去，自动提取人物关系与设定标签，生成结构化 Obsidian 知识库，可视化角色成长曲线。</p>
+      <ul>
+        <li>解决<b>跨块实体对齐</b>：重叠窗口分块 + 前文摘要传递，人物关系分块后不丢失</li>
+        <li>实现<b>增量缓存</b>，重复分析速度提升 100 倍——跑挂了不用从头再来</li>
+        <li>支持部署为 Linux 定时任务；输出交付级文档：完整 README、API 对接说明及用户手册</li>
+      </ul>
+    </div>
+
+    <div class="resume-item reveal">
+      <div class="resume-item-head">
+        <h3>AI 每日简报生成器</h3>
+        <span class="when">2026.05 · 独立主导 · <a href="https://github.com/SaltedFish-ZZJ/newspaper-daily" target="_blank" rel="noopener">已开源 ↗</a></span>
+      </div>
+      <p class="sub">Python / RSS 聚合 / 自动化部署</p>
+      <p class="proj-why"><b>为什么做：</b>让一个信息处理任务真正"无人值守"——每天自动跑、坏了能发现、信息源挂了不影响整体。</p>
+      <p style="font-size:.92rem; color:var(--txt);">从 AI HOT、量子位、36氪等科技源自动抓取当日资讯，AI 筛选合成，输出 5 分钟可读简报。</p>
+      <ul>
+        <li>模块化三层架构（sources / engine / output），信息源插拔式扩展——某个源失效不影响整条链路</li>
+        <li>部署为 Crontab 定时任务，全流程无人值守</li>
+        <li>RSS + API 双轨抓取，Prompt 工程实现 30 条 → 5 条智能精选</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">技术能力</h2>
+    <table class="reveal" style="width:100%; border-collapse:collapse; font-size:.92rem;">
+      <tbody>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650; width:9rem;">排障工具链</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">grep / awk 日志分析；httpx / curl 接口调试；异常收窄与降级策略</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Python 工程</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">独立交付 4 个完整项目；Rich TUI；自动化测试（780 用例）；pip 打包发布</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">系统与部署</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">Linux / Crontab / Shell 自动化；Windows 环境问题定位；GitHub Actions CI</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">前端基础</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">HTML / CSS / JavaScript / TypeScript（本网站即手写构建）；能看懂、能改、能配合排查</td></tr>
+        <tr><td style="padding:.7rem .8rem; font-weight:650;">AI 工具运用</td><td style="padding:.7rem .8rem; color:var(--txt);">把 AI 用在排障里：丢报错日志、让 AI 给排查方向，我来验证和拍板——快，但不盲信</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <h2 class="reveal">个人优势</h2>
+    <div class="adv-grid">
+      <p class="adv reveal"><b>能排障，不慌</b> —— AI 生成的会出错，外部服务会挂，环境会不兼容。我做的每个项目都设计降级和日志，出问题看日志、定位、修掉，而不是等别人救。</p>
+      <p class="adv reveal" style="--d:.08s"><b>能沟通，会翻译</b> —— 天坛志愿者 500+ 人次现场服务，能快速判断对方卡在哪、用对方听得懂的话讲清楚。实施岗的核心是把"技术"翻译成"人话"。</p>
+      <p class="adv reveal" style="--d:.16s"><b>能交付，不烂尾</b> —— 文档、测试、打包、部署一条龙。做的不是 demo，是能装、能跑、能交到别人手里的东西。</p>
+      <p class="adv reveal" style="--d:.24s"><b>用 AI 提效，不盲信</b> —— 把 AI 当排障助手：丢日志、拿排查方向、我来验证。快，但每个结论自己过一遍。</p>
+    </div>
+  </div>
+</section>
+
+<section class="resume-section">
+  <div class="container">
+    <div class="reveal" style="display:grid; grid-template-columns: 1fr 1fr; gap: 0 4rem;">
+      <div>
+        <h2 style="margin-bottom:1.2rem;">志愿者经历</h2>
+        <div class="resume-item">
+          <div class="resume-item-head">
+            <h3>北京天坛志愿者</h3>
+            <span class="when">2025.06</span>
+          </div>
+          <p class="sub">游客引导与现场服务</p>
+          <ul>
+            <li>高峰客流中快速识别游客情绪，提供有效引导，累计服务超 500 人次</li>
+            <li>锻炼了现场沟通与同理心，可胜任客户对接与需求沟通工作</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2 style="margin-bottom:1.2rem;">教育经历</h2>
+        <div class="resume-item">
+          <div class="resume-item-head">
+            <h3>北京科技职业学院</h3>
+            <span class="when">2023 - 2026</span>
+          </div>
+          <p class="sub">软件技术 · 大专</p>
+          <p style="font-size:.875rem; color:var(--txt);">在校课程：HarmonyOS 开发、机器学习应用、微信小程序、C 语言、软件工程实践、Linux 操作系统</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <span class="brand"><span class="at">@</span>zzj<span class="at">:~$</span></span>
+      <p class="footer-motto">"我不造 AI，我是最会用 AI 的人。"</p>
+    </div>
+    <div>
+      <h5>站内</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="blog.html">博客</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>联系</h5>
+      <ul>
+        <li><a href="https://github.com/SaltedFish-ZZJ" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><button class="copy-btn" data-copy="744785343@qq.com" title="点击复制邮箱">744785343@qq.com</button></li>
+        <li><button class="copy-btn" data-copy="13394200577" title="点击复制电话">13394200577</button></li>
+                <li><button class="copy-btn" data-copy="Z13394200577" title="点击复制微信">Z13394200577</button></li>
+              </ul>
+    </div>
+    <div class="footer-bottom" style="grid-column: 1 / -1;">
+      <span>© <span id="year">2026</span> 朱梓健</span>
+      <span>本站由 AI Agent 协作开发——这本身就是我想做的事</span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="返回顶部">↑</button>
+<script src="assets/main.js"></script>
+</body>
+</html>

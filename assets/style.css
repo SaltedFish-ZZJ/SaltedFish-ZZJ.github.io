@@ -509,6 +509,17 @@ a { color: inherit; text-decoration: none; }
 .post-nav a:hover { color: var(--gold); }
 
 /* ── 简历页 ── */
+.resume-switch {
+  display: inline-flex; gap: .4rem; margin: 0 0 1.6rem;
+  background: var(--gold-soft); border: 1px solid var(--line-gold);
+  padding: .3rem; font-family: var(--font-mono);
+}
+.resume-switch a {
+  padding: .45rem 1.1rem; font-size: .78rem; letter-spacing: .03em;
+  color: var(--ink-2); transition: all .25s var(--ease);
+}
+.resume-switch a.active { background: var(--gold); color: var(--btn-ink); font-weight: 700; }
+.resume-switch a:not(.active):hover { color: var(--gold); }
 .resume-head { padding: 4.5rem 0 2.5rem; }
 .resume-head h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.4rem, 5vw, 3.4rem); }
 .resume-contact {
