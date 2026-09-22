@@ -62,7 +62,7 @@
     <div class="resume-highlights reveal" style="--d:.3s">
       <div class="hl-item"><span class="hl-num">500<em>+</em></span><span class="hl-label">人次现场服务 · 沟通有底</span></div>
       <div class="hl-item"><span class="hl-num">4</span><span class="hl-label">个独立交付并部署的项目</span></div>
-      <div class="hl-item"><span class="hl-num">780</span><span class="hl-label">测试用例兜底 · 排障有据</span></div>
+      <div class="hl-item"><span class="hl-num">737</span><span class="hl-label">测试用例兜底 · 排障有据</span></div>
       <div class="hl-item"><span class="hl-num">2</span><span class="hl-label">套降级 / 容错方案落地</span></div>
     </div>
 
@@ -128,13 +128,13 @@
         <h3>AI 故事知识库系统</h3>
         <span class="when">2026.06 · 独立主导</span>
       </div>
-      <p class="sub">Python / DeepSeek API / 长文本 Pipeline</p>
-      <p class="proj-why"><b>为什么做：</b>验证一个长文本任务能不能稳定跑完——82 万字输入，几十次 API 调用，中间任何一步出错都不能白跑。</p>
-      <p style="font-size:.92rem; color:var(--txt);">把 82 万字的《平凡的世界》喂进去，自动提取人物关系与设定标签，生成结构化 Obsidian 知识库，可视化角色成长曲线。</p>
+      <p class="sub">Python / LLM API 接入 / 长文本 Pipeline</p>
+      <p class="proj-why"><b>为什么做：</b>验证一个长文本任务能不能稳定跑完——80 万字输入，几十次 API 调用，中间任何一步出错都不能白跑。</p>
+      <p style="font-size:.92rem; color:var(--txt);">把 80 万字的《平凡的世界》喂进去，自动提取人物关系与设定标签，生成结构化 Obsidian 知识库，可视化角色成长曲线。</p>
       <ul>
         <li>解决<b>跨块实体对齐</b>：重叠窗口分块 + 前文摘要传递，人物关系分块后不丢失</li>
-        <li>实现<b>增量缓存</b>，重复分析速度提升 100 倍——跑挂了不用从头再来</li>
-        <li>支持部署为 Linux 定时任务；输出交付级文档：完整 README、API 对接说明及用户手册</li>
+        <li>实现<b>增量分析</b>，跳过已处理章节、支持追加新内容——跑挂了不用从头再来</li>
+        <li>支持部署为 Linux 服务（systemd）；输出交付级文档：完整 README、API 对接说明及用户手册</li>
       </ul>
     </div>
 
@@ -161,7 +161,7 @@
     <table class="reveal" style="width:100%; border-collapse:collapse; font-size:.92rem;">
       <tbody>
         <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650; width:9rem;">排障工具链</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">grep / awk 日志分析；httpx / curl 接口调试；异常收窄与降级策略</td></tr>
-        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Python 工程</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">独立交付 4 个完整项目；Rich TUI；自动化测试（780 用例）；pip 打包发布</td></tr>
+        <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">Python 工程</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">独立交付 4 个完整项目；Rich TUI；自动化测试（737 用例）；pip 打包发布</td></tr>
         <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">系统与部署</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">Linux / Crontab / Shell 自动化；Windows 环境问题定位；GitHub Actions CI</td></tr>
         <tr><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; font-weight:650;">前端基础</td><td style="border-bottom:1px solid var(--line); padding:.7rem .8rem; color:var(--txt);">HTML / CSS / JavaScript / TypeScript（本网站即手写构建）；能看懂、能改、能配合排查</td></tr>
         <tr><td style="padding:.7rem .8rem; font-weight:650;">AI 工具运用</td><td style="padding:.7rem .8rem; color:var(--txt);">把 AI 用在排障里：丢报错日志、让 AI 给排查方向，我来验证和拍板——快，但不盲信</td></tr>
