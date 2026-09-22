@@ -84,10 +84,10 @@
       </div>
       <p class="sub">Python / LLM API 接入 / 长文本处理 Pipeline</p>
       <p class="proj-why"><b>为什么做：</b>想验证一个问题——AI 能不能真的"读懂"一部 80 万字的长篇小说，不是生成摘要，而是重建出人物关系网络。</p>
-      <p style="font-size:.92rem; color:var(--txt);">把 80 万字的《平凡的世界》喂进去，自动提取人物关系与设定标签，生成结构化 Obsidian 知识库，可视化角色成长曲线。</p>
+      <p style="font-size:.92rem; color:var(--txt);">把 80 万字的《平凡的世界》喂进去，自动提取人物、关系、设定与关键事件，生成结构化 Obsidian 知识库，可视化角色成长曲线。</p>
       <ul>
         <li>设计长文本处理 Pipeline：<b>重叠窗口分块 + 前文摘要传递</b>，解决跨块实体对齐问题，人物关系分块后不丢失</li>
-        <li>搭建"实体提取 → 关系分析 → 情节总结"完整工作流，对接 LLM API，支持增量分析，可部署为 Linux 服务（systemd）</li>
+        <li>搭建"实体提取 → 关系分析 → 情节摘要"完整工作流，对接 OpenAI 兼容 LLM 接口；知识库可反向驱动 AI 续写新章节；可部署为 Linux 服务（systemd）</li>
         <li>实现增量分析：跳过已处理章节、支持追加新内容，中断后不必从头重跑</li>
         <li>输出交付级文档：完整 README、API 对接说明及用户手册</li>
       </ul>

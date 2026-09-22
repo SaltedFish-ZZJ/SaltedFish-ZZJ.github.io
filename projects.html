@@ -96,16 +96,16 @@
         <div class="proj-top"><h3><a href="https://github.com/SaltedFish-ZZJ/story-wiki" target="_blank" rel="noopener">AI 故事知识库系统</a></h3><span class="proj-num">2026.06 · GitHub</span></div>
         <p class="proj-why"><b>为什么做：</b>验证 AI 能否真正"读懂"一部 80 万字的长篇小说——不是生成摘要，而是重建出人物关系网络。</p>
         <p class="proj-desc">
-          把 80 万字的《平凡的世界》喂进去，自动提取人物关系、角色对话、设定标签，
-          生成 Obsidian 知识库，可视化角色成长曲线。
+          把 80 万字的《平凡的世界》喂进去，自动提取人物、关系、设定与关键事件，
+          生成 Obsidian 知识库：Graph View 看人物关系网，成长曲线看角色变化。知识库还能驱动 AI 续写新章节。
         </p>
         <p class="proj-desc">
           核心是<strong>重叠窗口分块 + 前文摘要传递</strong>机制，解决跨块实体对齐——
           人物关系不丢。增量分析跳过已处理章节、支持追加新内容，中断后不必从头重跑；
-          可部署为 Linux 服务（systemd）。配套完整 README、API 对接说明和用户手册。
+          配套 589 个测试全部通过、Flask Web 界面与完整文档，可部署为 Linux 服务（systemd）。
         </p>
         <div class="proj-foot">
-          <span class="tag">Python</span><span class="tag">DeepSeek API</span><span class="tag">长文本处理</span><span class="tag">pytest ×589</span>
+          <span class="tag">Python</span><span class="tag">OpenAI 兼容 LLM</span><span class="tag">长文本处理</span><span class="tag">pytest ×589</span>
           <a class="proj-link" href="https://github.com/SaltedFish-ZZJ/story-wiki" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
         </div>
       </div>
