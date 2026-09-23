@@ -510,7 +510,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── 简历页 ── */
 .resume-switch {
-  display: inline-flex; gap: .4rem; margin: 0 0 1.6rem;
+  display: inline-flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1.6rem;
   background: var(--gold-soft); border: 1px solid var(--line-gold);
   padding: .3rem; font-family: var(--font-mono);
 }
@@ -520,6 +520,11 @@ a { color: inherit; text-decoration: none; }
 }
 .resume-switch a.active { background: var(--gold); color: var(--btn-ink); font-weight: 700; }
 .resume-switch a:not(.active):hover { color: var(--gold); }
+@media (max-width: 640px) {
+  .resume-switch { display: flex; width: 100%; }
+  .resume-switch a { flex: 1 1 auto; padding: .5rem .6rem; font-size: .72rem; text-align: center; }
+}
+@media print { .resume-switch { display: none !important; } }
 .resume-head { padding: 4.5rem 0 2.5rem; }
 .resume-head h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.4rem, 5vw, 3.4rem); }
 .resume-contact {
